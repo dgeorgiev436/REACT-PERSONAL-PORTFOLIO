@@ -8,7 +8,6 @@ import PhoneIcon from '@material-ui/icons/Phone';
 import EmailIcon from '@material-ui/icons/Email';
 import LocationOnIcon from '@material-ui/icons/LocationOn';
 import {ToastContainer, toast} from "react-toastify";
-import firebaseDB from "../firebase/firebase"
 import "react-toastify/dist/ReactToastify.css"
 import emailjs from "emailjs-com"
 
@@ -17,18 +16,11 @@ function ContactPage() {
     const emailIcon = <EmailIcon />
     const locationIcon = <LocationOnIcon />
 		  
-	const nameInput = useRef(null);
-	const emailInput = useRef(null);
-	const subjectInput = useRef(null);
-	const messageInput = useRef(null);
-		  
-	const input = {
-		name: nameInput,
-		email: emailInput,
-		subject: subjectInput,
-		message: messageInput
-	}
-	
+	let nameInput = useRef(null);
+	let emailInput = useRef(null);
+	let subjectInput = useRef(null);
+	let messageInput = useRef(null);
+
 	
 		  
 	const submitHandler = (e) => {
@@ -38,6 +30,7 @@ function ContactPage() {
 			toast.error("Plesae provide value in each input field")
 		}else{
 			
+// 			Set emailJs parameters
 			emailjs.sendForm(
 				"service_6gbnzwa",
 				"template_uby3cfu",
@@ -48,11 +41,15 @@ function ContactPage() {
 			}).catch(err => {
 				console.log(err)
 			})
-// 			Initialize collection
 			
-// 			Set all fields back to empty
-			// setInput({nameInput: "", emailInput: "", subjectInput: "", messageInput: ""});
-			toast.success("Form Submitted Succesfully");
+// 			Sucess message
+			toast.success("The message was sent to Denis");
+			
+// 			Reset inputs
+			nameInput.current.value = ""
+			emailInput.current.value = ""
+			subjectInput.current.value = ""
+			messageInput.current.value = ""
 		}
 		
 	}
@@ -72,19 +69,19 @@ function ContactPage() {
                     <h4>Get In Touch</h4>
                     <div className="form-group">
                         <label htmlFor="name">Name</label>
-                        <input ref={nameInput}  type="text" id="name" value={nameInput}/>
+                        <input ref={nameInput}  type="text" id="name" name="name" value={nameInput.current} />
                     </div>
                     <div className="form-group">
                         <label htmlFor="email">Email</label>
-                        <input ref={emailInput} type="email" id="email" value={emailInput} />
+                        <input ref={emailInput} type="email" id="email" name="email" value={emailInput.current} />
                     </div>
                     <div className="form-group">
                         <label htmlFor="subject">Subject</label>
-                        <input ref={subjectInput} type="text" id="subject" value={subjectInput}/>
+                        <input ref={subjectInput} type="text" id="subject" name="subject" value={subjectInput.current}/>
                     </div>
                     <div className="form-group">
                         <label htmlFor="message">Message</label>
-                        <textarea ref={messageInput} id="message" cols="30" rows="5" value={messageInput}></textarea>
+                        <textarea ref={messageInput} id="message" cols="30" name="message" rows="5" value={messageInput.current}></textarea>
                     </div>
                     <div className="form-group">
                         <PrimaryButton btn={'Send Message'} />
