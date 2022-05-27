@@ -13,7 +13,6 @@ import client3 from './../images/Testimonials/client.jpg';
 function AboutPage() {
     return (
         <AboutPageStyled>
-            {/* about Start Here */}
             <Title title={'About'} span={'Me'} />
             <InnerLayout className="about-section">
                 <div className="image-part">
@@ -21,8 +20,8 @@ function AboutPage() {
                 </div>
                 <div className="info-part">
                     <h4>Who am i?</h4>
-                    <h3>I am <span>Aaron Smith</span></h3>
-                    <p>I am full stack web developer. I have Experience in Developing Websites, Web Applications, Mobile Games (Android & IOS), and Flutter Mobile Applications.</p>
+                    <h3>I am <span>Denis Georgiev</span></h3>
+                    <p>I am a full stack web developer. I have Experience in building Websites, Web Applications, APIs and Databases.</p>
                     <div className="information">
                         <ul>
                             <li>Full Name</li>
@@ -30,34 +29,20 @@ function AboutPage() {
                             <li>Nationality</li>
                             <li>Languages</li>
                             <li>Address</li>
-                            <li>Freelance</li>
+                          {/*    <li>Freelance</li> */}
                         </ul>
                         <ul className="details">
-                            <li>: Antron Smith</li>
+                            <li>: Denis Georgiev</li>
                             <li>: 25 Years</li>
-                            <li> : United Kingdom</li>
-                            <li> : English , French</li>
-                            <li> : 11 Jedburgh Road,Lethanhill</li>
-                            <li> : Available</li>
+                            <li> : Bulgarian</li>
+                            <li> : English , Bulgarian</li>
+                            <li> : 1 Joslin Avenue, NW9 5HW, London</li>
+                             {/* <li> : Available</li> */}
                         </ul>
                     </div>
                     <PrimaryButton btn={'Download Cv'} />
                 </div>
             </InnerLayout>
-            {/* About End Here */}
-
-            {/* TEstimonials Start Here */}
-            <div className="testimonials">
-                <Title title={'Testimonials'} span={''} />
-                <InnerLayout>
-                    <Carousel>
-                        <TestimonialItem text={'Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, est quae? Rem natus sunt vitae esse eum possimus nulla quam'} img={client1} />
-                        <TestimonialItem text={' Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, est quae? Rem natus sunt vitae esse eum possimus nulla quam'} img={client2} />
-                        <TestimonialItem text={' Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, est quae? Rem natus sunt vitae esse eum possimus nulla quam'} img={client3} />
-                    </Carousel>
-                </InnerLayout>
-            </div>
-            {/* TEstimonials End Here */}
         </AboutPageStyled>
     )
 }

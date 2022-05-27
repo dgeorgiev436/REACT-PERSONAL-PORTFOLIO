@@ -22,33 +22,17 @@ function ServicePage() {
 
     return (
         <ServicePageStyled>
-            {/* Service Start Here */}
-            <Title title={'Our'} span={'Services'} />
+            <Title title={'My'} span={'Skills'} />
             <InnerLayout>
                 <div className="services">
-                    <ServiceItem image={designtrends} title={'Design Trends'} paragraph={'Lorem ipsum dolor sit amet consectetur adipisicing elit'} />
-                    <ServiceItem image={fullyResponsive} title={'Fully Responsive'} paragraph={'Lorem ipsum dolor sit amet consectetur adipisicing elit'} />
-                    <ServiceItem image={webDevelopment} title={'Web Development'} paragraph={'Lorem ipsum dolor sit amet consectetur adipisicing elit'} />
-                    <ServiceItem image={appDevelopment} title={'App Development'} paragraph={'Lorem ipsum dolor sit amet consectetur adipisicing elit'} />
-                    <ServiceItem image={customerSupport} title={'Customer Support'} paragraph={'Lorem ipsum dolor sit amet consectetur adipisicing elit'} />
-                    <ServiceItem image={branding} title={'Branding'} paragraph={'Lorem ipsum dolor sit amet consectetur adipisicing elit'} />
+                    <ServiceItem image={designtrends} title={'APIs'} paragraph={'Skilled in creating and developing custom APIs by understanding client requirements. Proficient in testing new software and APIs to identify bugs and modify the codes for improving performance. '} />
+                    <ServiceItem image={fullyResponsive} title={'Databases'} paragraph={'Experience in designing and developing application leveraging databases'} />
+                    <ServiceItem image={webDevelopment} title={'Single Page Web Applications'} paragraph={'Experience in building single page web applications with the use of JavaScript frameworks such as React.js'} />
+                    <ServiceItem image={appDevelopment} title={'Full-Stack Web Development'} paragraph={'Worked on multiple full-stack web application projects that included API building, Database designig, components building and front-end designing.'} />
+                    <ServiceItem image={customerSupport} title={'Front-End Web Development'} paragraph={'Experienced in working with JavaScript frameworks such as React.js. Good understanding of HTML and CSS. Ability to implement responsive website design while delivering engaging user experience '} />
+					{ /* <ServiceItem image={branding} title={'Branding'} paragraph={'Lorem ipsum dolor sit amet consectetur adipisicing elit'} /> */}
                 </div>
             </InnerLayout>
-            {/* Service End Here */}
-
-            {/* Pricing And Plan Start Here */}
-            <div className="plans">
-                <Title title={'Choose A'} span={'Plan'} />
-                <InnerLayout>
-                    <div className="pricing-plans">
-                        <PricingCard image={Diamond} plan={'Basic'} price={'$10 /Month'} button={'Get Started'} features={['Mobile App Desgin','Responsive design', 'Database Development', 'Web Design', '24/7 Support' ]}/>
-                        <PricingCard image={Diamond}  plan={'Standard'} price={'$20 /Month'} button={'Get Started'} features={['Mobile App Desgin','Responsive design', 'Database Development', 'Web Design', '24/7 Support' ]}/>
-                        <PricingCard image={Diamond}  plan={'Premium'} price={'$40 /Month'} button={'Get Started'} features={['Mobile App Desgin','Responsive design', 'Database Development', 'Web Design', '24/7 Support' ]}/>
-                    </div>
-                </InnerLayout>
-            </div>
-            {/* Pricing And Plan End Here */}
-
 
         </ServicePageStyled>
     )

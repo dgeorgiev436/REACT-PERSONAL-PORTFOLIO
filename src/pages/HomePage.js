@@ -12,15 +12,15 @@ function HomePage() {
         <HomePageStyled>
             <Particle />
             <div className="typography">
-                <h1>Hi, I am <span>Antron Smith</span></h1>
-                <p>I am full stack web developer. I have Experience in Developing Websites, Web Applications, Mobile Games (Android & IOS), and Flutter Mobile Applications. We are providing clean code.</p>
+                <h1>Hi, I am <span>Denis Georgiev</span></h1>
+                <p>I am a full stack web developer. I have Experience in building Websites, Web Applications, APIs and Databases.</p>
 
                 <div className="social-icons">
-                    <a href="https://www.facebook.com/" target='__blank'> <FacebookIcon /></a>
-                    <a href="https://twitter.com/?lang=en" target='__blank'> <TwitterIcon /></a>
-                    <a href="https://github.com/" target='__blank'> <GitHubIcon /></a>
-                    <a href="https://in.linkedin.com/" target='__blank'> <LinkedInIcon /></a>
-                    <a href="https://www.instagram.com/" target='__blank'> <InstagramIcon /></a>
+					{ /* <a href="https://www.facebook.com/" target='__blank'> <FacebookIcon /></a> */}
+                    {/* <a href="https://twitter.com/?lang=en" target='__blank'> <TwitterIcon /></a> */}
+                    <a href="https://github.com/dgeorgiev436/" target='__blank'> <GitHubIcon /></a>
+                    <a href="https://linkedin.com/in/denis-georgiev-87b310213/" target='__blank'> <LinkedInIcon /></a>
+                	{ /*  <a href="https://www.instagram.com/" target='__blank'> <InstagramIcon /></a> */}
                 </div>
             </div>
 
