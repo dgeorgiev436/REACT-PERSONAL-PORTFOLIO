@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useRef} from 'react';
 import styled from 'styled-components';
 import Title from './../components/Title';
 import { InnerLayout } from './../styles/Layouts';
@@ -8,42 +8,50 @@ import PhoneIcon from '@material-ui/icons/Phone';
 import EmailIcon from '@material-ui/icons/Email';
 import LocationOnIcon from '@material-ui/icons/LocationOn';
 import {ToastContainer, toast} from "react-toastify";
-import firebaseDB from "../firebase/firebase"
 import "react-toastify/dist/ReactToastify.css"
+import emailjs from "emailjs-com"
 
 function ContactPage() {
     const phoneIcon = <PhoneIcon />
     const emailIcon = <EmailIcon />
     const locationIcon = <LocationOnIcon />
 		  
-	const [input, setInput] = useState({
-		name: "",
-		email: "",
-		subject: "",
-		message: ""
-	})
+	let nameInput = useRef(null);
+	let emailInput = useRef(null);
+	let subjectInput = useRef(null);
+	let messageInput = useRef(null);
+
 	
-	
-	const {name, email, subject, message} = input
 		  
 	const submitHandler = (e) => {
 		e.preventDefault();
 // 		Check if all fields are filled
-		if(!name || !email || !subject || !message){
+		if(!nameInput || !emailInput || !subjectInput || !messageInput){
 			toast.error("Plesae provide value in each input field")
 		}else{
-// 			Initialize collection
-			firebaseDB.child("contacts").push(input);
-// 			Set all fields back to empty
-			setInput({name: "", email: "", subject: "", message: ""});
-			toast.success("Form Submitted Succesfully");
+			
+// 			Set emailJs parameters
+			emailjs.sendForm(
+				"service_6gbnzwa",
+				"template_uby3cfu",
+				e.target,
+				"yDG1-YhtNnfFBe18H"
+			).then(res => {
+				console.log(res)
+			}).catch(err => {
+				console.log(err)
+			})
+			
+// 			Sucess message
+			toast.success("The message was sent to Denis");
+			
+// 			Reset inputs
+			nameInput.current.value = ""
+			emailInput.current.value = ""
+			subjectInput.current.value = ""
+			messageInput.current.value = ""
 		}
 		
-	}
-	
-	const handleInputChange = (e) => {
-		let {name, value} = e.target;
-		setInput({...input, [name]: value})
 	}
 
     return (
@@ -61,19 +69,19 @@ function ContactPage() {
                     <h4>Get In Touch</h4>
                     <div className="form-group">
                         <label htmlFor="name">Name</label>
-                        <input value={name}  onChange={handleInputChange} type="text" id="name"/>
+                        <input ref={nameInput}  type="text" id="name" name="name" value={nameInput.current} />
                     </div>
                     <div className="form-group">
                         <label htmlFor="email">Email</label>
-                        <input onChange={handleInputChange} type="email" id="email" value={email} />
+                        <input ref={emailInput} type="email" id="email" name="email" value={emailInput.current} />
                     </div>
                     <div className="form-group">
                         <label htmlFor="subject">Subject</label>
-                        <input onChange={handleInputChange} type="text" id="subject" value={subject} />
+                        <input ref={subjectInput} type="text" id="subject" name="subject" value={subjectInput.current}/>
                     </div>
                     <div className="form-group">
                         <label htmlFor="message">Message</label>
-                        <textarea onChange={handleInputChange} id="message" cols="30" rows="5" value={message}></textarea>
+                        <textarea ref={messageInput} id="message" cols="30" name="message" rows="5" value={messageInput.current}></textarea>
                     </div>
                     <div className="form-group">
                         <PrimaryButton btn={'Send Message'} />
