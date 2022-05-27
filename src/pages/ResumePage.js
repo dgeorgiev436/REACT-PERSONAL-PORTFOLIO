@@ -14,33 +14,35 @@ function ResumePage() {
             <InnerLayout className="resumeSection">
                 <div className="education">
                     <h4><SchoolIcon /><span>Education</span></h4>
-                    <ResumeItem year={'2004-2007'} title={'Computer Science'} subTitle={'Cambridge Uiversity'} text={'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit, quisquam!'} />
-                    <ResumeItem year={'2008-2010'} title={'Bachleor Degree'} subTitle={'Kingdom University'} text={'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit, quisquam!'} />
-                    <ResumeItem year={'2012-2015'} title={'Master Degree'} subTitle={'Hardvard Uiversity'} text={'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit, quisquam!'} />
+                    <ResumeItem year={'2018-2022'} title={'BSc (Hons) Computing Technologies'} subTitle={'University of Roehampton (1st Class)'} text={'Graduate with a First Class Honours Degree. Multiple times project leader in group university projects involving Mobile Application Development, Web Application Development, Data Science and Cyber Security. '} />
+					{ /* <ResumeItem year={'2008-2010'} title={'Bachleor Degree'} subTitle={'Kingdom University'} text={'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit, quisquam!'} />
+                    <ResumeItem year={'2012-2015'} title={'Master Degree'} subTitle={'Hardvard Uiversity'} text={'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit, quisquam!'} /> */}
                 </div>
                 <div className="experience">
                     <h4> <BusinessCenterIcon /><span>Experience</span></h4>
-                    <ResumeItem year={'2015-2017'} title={'App Developer'} subTitle={'Microsoft'} text={'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit, quisquam!'} />
-                    <ResumeItem year={'2017-2018'} title={'Software Engineer'} subTitle={'Google'} text={'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit, quisquam!'} />
-                    <ResumeItem year={'2019-Present'} title={'Backend Developer'} subTitle={'Adobe'} text={'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit, quisquam!'} />
+                    <ResumeItem year={'2017-2018'} title={'Security Officer'} subTitle={'First Class Protection'} text={'•	Wrote detailed reports on property damage, theft, presence of unauthorized persons and unusual incidences.'} />
+					<ResumeItem year={'2018-2019'} title={'Concierge'} subTitle={'Urbanest'} text={'•	Remedied issues quickly and effectively through active listening, conflict resolution and dynamic communication skills.'} />
+                    <ResumeItem year={'2019-Present'} title={'Concierge'} subTitle={'James Andrew Residential'} text={'Work closely with guests, some of VIP or celebrity status and always respected their privacy.'} />
                 </div>
             </InnerLayout>
             {/* Resume Section End Here */}
 
             {/* Skills Section Start Here */}
             <div className="my-skills">
-                <Title title={'My'} span={'Skills'} />
+                <Title title={'Technical'} span={'Skills'} />
                 <InnerLayout>
                     <div className="skills">
-                       <SkillsItem title={'HTML5'} width={'90%'} text={'90%'} />
-                       <SkillsItem title={'CSS3'} width={'80%'} text={'80%'} />
                        <SkillsItem title={'JAVASCRIPT'} width={'75%'} text={'75%'} />
-                       <SkillsItem title={'BOOTSTRAP'} width={'65%'} text={'65%'} />
-                       <SkillsItem title={'REACT JS'} width={'85%'} text={'85%'} />
+                       <SkillsItem title={'EXPRESS JS'} width={'70%'} text={'70%'} />
+                       <SkillsItem title={'REACT JS'} width={'68%'} text={'68%'} />
                        <SkillsItem title={'NODE JS'} width={'75%'} text={'75%'} />
                        <SkillsItem title={'MONGO DB'} width={'70%'} text={'70%'} />
-                       <SkillsItem title={'EXPRESS JS'} width={'65%'} text={'65%'} />
-                       <SkillsItem title={'REACT NATIVE'} width={'85%'} text={'85%'} />
+                       <SkillsItem title={'REDUX'} width={'65%'} text={'65%'} />
+                       <SkillsItem title={'TYPESCRIPT'} width={'66%'} text={'66%'} />
+					   <SkillsItem title={'HTML5'} width={'80%'} text={'90%'} />
+                       <SkillsItem title={'CSS3'} width={'70%'} text={'70%'} />
+                       <SkillsItem title={'JQUERY'} width={'65%'} text={'65%'} />
+                       <SkillsItem title={'BOOTSTRAP'} width={'70%'} text={'70%'} />
                     </div>
                 </InnerLayout>
             </div>
