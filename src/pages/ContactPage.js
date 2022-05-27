@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useRef} from 'react';
 import styled from 'styled-components';
 import Title from './../components/Title';
 import { InnerLayout } from './../styles/Layouts';
@@ -10,40 +10,51 @@ import LocationOnIcon from '@material-ui/icons/LocationOn';
 import {ToastContainer, toast} from "react-toastify";
 import firebaseDB from "../firebase/firebase"
 import "react-toastify/dist/ReactToastify.css"
+import emailjs from "emailjs-com"
 
 function ContactPage() {
     const phoneIcon = <PhoneIcon />
     const emailIcon = <EmailIcon />
     const locationIcon = <LocationOnIcon />
 		  
-	const [input, setInput] = useState({
-		name: "",
-		email: "",
-		subject: "",
-		message: ""
-	})
+	const nameInput = useRef(null);
+	const emailInput = useRef(null);
+	const subjectInput = useRef(null);
+	const messageInput = useRef(null);
+		  
+	const input = {
+		name: nameInput,
+		email: emailInput,
+		subject: subjectInput,
+		message: messageInput
+	}
 	
 	
-	const {name, email, subject, message} = input
 		  
 	const submitHandler = (e) => {
 		e.preventDefault();
 // 		Check if all fields are filled
-		if(!name || !email || !subject || !message){
+		if(!nameInput || !emailInput || !subjectInput || !messageInput){
 			toast.error("Plesae provide value in each input field")
 		}else{
+			
+			emailjs.sendForm(
+				"service_6gbnzwa",
+				"template_uby3cfu",
+				e.target,
+				"yDG1-YhtNnfFBe18H"
+			).then(res => {
+				console.log(res)
+			}).catch(err => {
+				console.log(err)
+			})
 // 			Initialize collection
-			firebaseDB.child("contacts").push(input);
+			
 // 			Set all fields back to empty
-			setInput({name: "", email: "", subject: "", message: ""});
+			// setInput({nameInput: "", emailInput: "", subjectInput: "", messageInput: ""});
 			toast.success("Form Submitted Succesfully");
 		}
 		
-	}
-	
-	const handleInputChange = (e) => {
-		let {name, value} = e.target;
-		setInput({...input, [name]: value})
 	}
 
     return (
@@ -61,19 +72,19 @@ function ContactPage() {
                     <h4>Get In Touch</h4>
                     <div className="form-group">
                         <label htmlFor="name">Name</label>
-                        <input value={name}  onChange={handleInputChange} type="text" id="name"/>
+                        <input ref={nameInput}  type="text" id="name" value={nameInput}/>
                     </div>
                     <div className="form-group">
                         <label htmlFor="email">Email</label>
-                        <input onChange={handleInputChange} type="email" id="email" value={email} />
+                        <input ref={emailInput} type="email" id="email" value={emailInput} />
                     </div>
                     <div className="form-group">
                         <label htmlFor="subject">Subject</label>
-                        <input onChange={handleInputChange} type="text" id="subject" value={subject} />
+                        <input ref={subjectInput} type="text" id="subject" value={subjectInput}/>
                     </div>
                     <div className="form-group">
                         <label htmlFor="message">Message</label>
-                        <textarea onChange={handleInputChange} id="message" cols="30" rows="5" value={message}></textarea>
+                        <textarea ref={messageInput} id="message" cols="30" rows="5" value={messageInput}></textarea>
                     </div>
                     <div className="form-group">
                         <PrimaryButton btn={'Send Message'} />
