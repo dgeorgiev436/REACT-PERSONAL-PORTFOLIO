@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styled from 'styled-components';
 import Title from './../components/Title';
 import { InnerLayout } from './../styles/Layouts';
@@ -7,39 +7,73 @@ import ContactInfoItem from './../components/ContactInfoItem';
 import PhoneIcon from '@material-ui/icons/Phone';
 import EmailIcon from '@material-ui/icons/Email';
 import LocationOnIcon from '@material-ui/icons/LocationOn';
+import {ToastContainer, toast} from "react-toastify";
+import firebaseDB from "../firebase/firebase"
+import "react-toastify/dist/ReactToastify.css"
 
 function ContactPage() {
-    const phone = <PhoneIcon />
-    const email = <EmailIcon />
-    const location = <LocationOnIcon />
+    const phoneIcon = <PhoneIcon />
+    const emailIcon = <EmailIcon />
+    const locationIcon = <LocationOnIcon />
+		  
+	const [input, setInput] = useState({
+		name: "",
+		email: "",
+		subject: "",
+		message: ""
+	})
+	
+	
+	const {name, email, subject, message} = input
+		  
+	const submitHandler = (e) => {
+		e.preventDefault();
+// 		Check if all fields are filled
+		if(!name || !email || !subject || !message){
+			toast.error("Plesae provide value in each input field")
+		}else{
+// 			Initialize collection
+			firebaseDB.child("contacts").push(input);
+// 			Set all fields back to empty
+			setInput({name: "", email: "", subject: "", message: ""});
+			toast.success("Form Submitted Succesfully");
+		}
+		
+	}
+	
+	const handleInputChange = (e) => {
+		let {name, value} = e.target;
+		setInput({...input, [name]: value})
+	}
 
     return (
         <ContactPageStyled>
+			<ToastContainer position="top-center"/>
             <Title title={'Contact'} span={'Me'} />
             <InnerLayout className="contact-section">
                 <div className="contact-info">
                     <h4>Contact Info</h4>
-                    <ContactInfoItem icon={phone} heading={'Call Me'} text={'077 1031 XXXX'} />
-                    <ContactInfoItem icon={email} heading={'Email Me'} text={'demo@gmail.com'} />
-                    <ContactInfoItem icon={location} heading={'Location'} text={'11 Jedburgh Road,Lethanhill, United Kingdom.'} />
+                    <ContactInfoItem icon={phoneIcon} heading={'Call Me'} text={'(+44) 7594 784916'} />
+                    <ContactInfoItem icon={emailIcon} heading={'Email Me'} text={'dgeorgiev436@gmail.com'} />
+                    <ContactInfoItem icon={locationIcon} heading={'Location'} text={'1 Joslin Avenue, NW9 5HW, London, United Kingdom'} />
                 </div>
-                <form onSubmit={(e)=>e.preventDefault()} className="form-part">
+                <form onSubmit={submitHandler} className="form-part">
                     <h4>Get In Touch</h4>
                     <div className="form-group">
                         <label htmlFor="name">Name</label>
-                        <input type="text" id="name" />
+                        <input value={name}  onChange={handleInputChange} type="text" id="name"/>
                     </div>
                     <div className="form-group">
                         <label htmlFor="email">Email</label>
-                        <input type="email" id="email" />
+                        <input onChange={handleInputChange} type="email" id="email" value={email} />
                     </div>
                     <div className="form-group">
                         <label htmlFor="subject">Subject</label>
-                        <input type="text" id="subject" />
+                        <input onChange={handleInputChange} type="text" id="subject" value={subject} />
                     </div>
                     <div className="form-group">
                         <label htmlFor="message">Message</label>
-                        <textarea id="message" cols="30" rows="5"></textarea>
+                        <textarea onChange={handleInputChange} id="message" cols="30" rows="5" value={message}></textarea>
                     </div>
                     <div className="form-group">
                         <PrimaryButton btn={'Send Message'} />

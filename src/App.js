@@ -82,8 +82,8 @@ function App() {
           <Route path="/services" exact> <ServicePage /> </Route>
           <Route path="/resume" exact> <ResumePage /> </Route>
           <Route path="/portfolio" exact> <PortfolioPage /> </Route>
-          <Route path="/blog" exact> <BlogPage /> </Route>
-          <Route path="/blogPost" exact> <BlogPost /> </Route>
+           {/* <Route path="/blog" exact> <BlogPage /> </Route>*/}
+			{/* <Route path="/blogPost" exact> <BlogPost /> </Route> */}
           <Route path="/contact" exact> <ContactPage /> </Route>
           <Redirect to="/" />
         </Switching>

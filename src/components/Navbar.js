@@ -14,11 +14,10 @@ function Navbar({setNavToggle}) {
         <li><NavLink to="/services" exact activeClassName="active-menu" onClick={()=>setNavToggle(false)}>Services</NavLink></li>
         <li><NavLink to="/resume" exact activeClassName="active-menu" onClick={()=>setNavToggle(false)}>Resume</NavLink></li>
         <li><NavLink to="/portfolio" exact activeClassName="active-menu" onClick={()=>setNavToggle(false)}>Portfolio</NavLink></li>
-        <li><NavLink to="/blog" exact activeClassName="active-menu" onClick={()=>setNavToggle(false)}>Blog</NavLink></li>
+		  {/* <li><NavLink to="/blog" exact activeClassName="active-menu" onClick={()=>setNavToggle(false)}>Blog</NavLink></li> */ }
         <li><NavLink to="/contact" exact activeClassName="active-menu" onClick={()=>setNavToggle(false)}>Contact</NavLink></li>
       </ul>
       <footer>
-        <p>@2021 Reactor Portfolio</p>
       </footer>
     </NavbarStyled>
   )
