@@ -16,10 +16,10 @@ function ContactPage() {
     const emailIcon = <EmailIcon />
     const locationIcon = <LocationOnIcon />
 		  
-	let nameInput = useRef(null);
-	let emailInput = useRef(null);
-	let subjectInput = useRef(null);
-	let messageInput = useRef(null);
+	let nameInput = useRef("");
+	let emailInput = useRef("");
+	let subjectInput = useRef("");
+	let messageInput = useRef("");
 
 	
 		  
@@ -69,19 +69,19 @@ function ContactPage() {
                     <h4>Get In Touch</h4>
                     <div className="form-group">
                         <label htmlFor="name">Name</label>
-                        <input ref={nameInput}  type="text" id="name" name="name" value={nameInput.current} />
+                        <input ref={nameInput}  type="text" id="name" name="name" defaultValue ={nameInput.current.value || ""} />
                     </div>
                     <div className="form-group">
                         <label htmlFor="email">Email</label>
-                        <input ref={emailInput} type="email" id="email" name="email" value={emailInput.current} />
+                        <input ref={emailInput} type="email" id="email" name="email" defaultValue ={emailInput.current.value || ""} />
                     </div>
                     <div className="form-group">
                         <label htmlFor="subject">Subject</label>
-                        <input ref={subjectInput} type="text" id="subject" name="subject" value={subjectInput.current}/>
+                        <input ref={subjectInput} type="text" id="subject" name="subject" defaultValue ={subjectInput.current.value || ""}/>
                     </div>
                     <div className="form-group">
                         <label htmlFor="message">Message</label>
-                        <textarea ref={messageInput} id="message" cols="30" name="message" rows="5" value={messageInput.current}></textarea>
+                        <textarea ref={messageInput} id="message" cols="30" name="message" rows="5" defaultValue ={messageInput.current.value || ""}></textarea>
                     </div>
                     <div className="form-group">
                         <PrimaryButton btn={'Send Message'} />

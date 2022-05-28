@@ -6,11 +6,12 @@ import image from './../images/Awatar/awatar.jpg';
 import PrimaryButton from './../components/PrimaryButton';
 import Carousel from 'react-elastic-carousel';
 import TestimonialItem from './../components/TestimonialItem';
-import client1 from './../images/Testimonials/client.jpg';
-import client2 from './../images/Testimonials/client.jpg';
-import client3 from './../images/Testimonials/client.jpg';
+
+
 
 function AboutPage() {
+	
+	
     return (
         <AboutPageStyled>
             <Title title={'About'} span={'Me'} />
@@ -21,7 +22,7 @@ function AboutPage() {
                 <div className="info-part">
                     <h4>Who am i?</h4>
                     <h3>I am <span>Denis Georgiev</span></h3>
-                    <p>I am a full stack web developer. I have Experience in building Websites, Web Applications, APIs and Databases.</p>
+                    <p>I am a full stack web developer. I have Experience in building Websites, Single-Page-Web-Applications, APIs and Databases.</p>
                     <div className="information">
                         <ul>
                             <li>Full Name</li>
@@ -29,7 +30,6 @@ function AboutPage() {
                             <li>Nationality</li>
                             <li>Languages</li>
                             <li>Address</li>
-                          {/*    <li>Freelance</li> */}
                         </ul>
                         <ul className="details">
                             <li>: Denis Georgiev</li>
@@ -37,10 +37,14 @@ function AboutPage() {
                             <li> : Bulgarian</li>
                             <li> : English , Bulgarian</li>
                             <li> : 1 Joslin Avenue, NW9 5HW, London</li>
-                             {/* <li> : Available</li> */}
                         </ul>
                     </div>
-                    <PrimaryButton btn={'Download Cv'} />
+					
+					{/* <PrimaryButton btn={'Download Cv'} /> */ }
+				
+				
+			
+	
                 </div>
             </InnerLayout>
         </AboutPageStyled>
