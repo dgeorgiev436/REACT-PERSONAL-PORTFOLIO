@@ -22,7 +22,10 @@ function AboutPage() {
                 <div className="info-part">
                     <h4>Who am i?</h4>
                     <h3>I am <span>Denis Georgiev</span></h3>
-                    <p>I am a full stack web developer. I have Experience in building Websites, Single-Page-Web-Applications, APIs and Databases.</p>
+                    <p>Motivated computer technologies graduate from University of Roehampton with 2 years of non-commercial experience in using MERN stack technologies for
+						projects that can be found in my GitHub account below. </p>
+					<p>Multiple times project leader in group university projects involving mobile application development, web application development, data science and cyber security. 
+						Seeking to implement skills in JavaScript, Node.js, Express.js, React.js and MongoDB to provide value and meet business needs.</p>
                     <div className="information">
                         <ul>
                             <li>Full Name</li>
@@ -67,7 +70,8 @@ const AboutPageStyled = styled.div`
             img{
                 width:90%;
                 height:90%;
-                border:2px solid var(--border-color);  
+                border:2px solid var(--border-color);
+				object-fit: cover;
             }
         }
         .info-part{
