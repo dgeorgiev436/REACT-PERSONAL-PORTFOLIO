@@ -1,9 +1,6 @@
 import moneyManager from './../images/Portfolio/MoneyManager.jpg';
-import img2 from './../images/Portfolio/portfolio.jpg';
-import img3 from './../images/Portfolio/portfolio.jpg';
-import img4 from './../images/Portfolio/portfolio.jpg';
-import img5 from './../images/Portfolio/portfolio.jpg';
-import img6 from './../images/Portfolio/portfolio.jpg';
+import techUnite from './../images/Portfolio/TechUnite.png';
+
 
 
 const Portfolio = [
@@ -18,12 +15,12 @@ const Portfolio = [
     },
     {
         id: 2,
-        title: 'Ecommerce Website',
-        subTitle: 'Take Your Business Online',
-        category: 'Ecommerce',
-        image: img2,
-        link1: 'https://www.google.com/',
-        link2: 'https://www.google.com/',
+        title: 'TechUnite',
+        subTitle: 'Create a developer profile/portfolio, share posts and get help from other developers',
+        category: 'Single-Page Web Application',
+        image: techUnite,
+        link1: 'https://github.com/dgeorgiev436/Major-Dissertation-Project-TechUnite/',
+        link2: 'https://morning-plains-14040.herokuapp.com/',
     }
 ];
 

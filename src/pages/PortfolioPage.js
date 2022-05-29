@@ -108,6 +108,8 @@ const PortfolioPageStyled = styled.div`
                     }
                 }
                 .portfolio-image{
+					height: 18rem;
+					
                     &::before{
                         content: '';
                         position: absolute;
