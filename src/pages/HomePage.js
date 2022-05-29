@@ -13,7 +13,7 @@ function HomePage() {
             <Particle />
             <div className="typography">
                 <h1>Hi, I am <span>Denis Georgiev</span></h1>
-                <p>I am a full stack web developer. I have Experience in building Websites, Web Applications, APIs and Databases.</p>
+                <p>I am a full stack web developer. I have Experience in building Websites, Single Page Web Applications, APIs and Databases.</p>
 
                 <div className="social-icons">
 					{ /* <a href="https://www.facebook.com/" target='__blank'> <FacebookIcon /></a> */}

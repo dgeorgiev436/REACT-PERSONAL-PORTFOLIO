@@ -4,7 +4,7 @@ import Title from './../components/Title';
 import { InnerLayout } from './../styles/Layouts';
 import Portfolio from './../data/Portfolio';
 import GitHubIcon from '@material-ui/icons/GitHub';
-import PinterestIcon from '@material-ui/icons/Pinterest';
+import LinkIcon from '@material-ui/icons/Link';
 import Button from './../components/Button';
 
 const allButtons = ['All', ...new Set(Portfolio.map(item=>item.category))]
@@ -36,7 +36,7 @@ function PortfolioPage() {
                                         <img src={item.image} alt="" />
                                         <ul>
                                             <li><a href={item.link1}> <GitHubIcon /> </a></li>
-                                            <li><a href={item.link2}> <PinterestIcon /> </a></li>
+                                            <li><a href={item.link2}> <LinkIcon /> </a></li>
                                         </ul>
                                     </div>
                                     <h6>{item.title}</h6>
