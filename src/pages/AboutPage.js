@@ -6,18 +6,8 @@ import image from './../images/Awatar/awatar.jpg';
 import PrimaryButton from './../components/PrimaryButton';
 import Carousel from 'react-elastic-carousel';
 import TestimonialItem from './../components/TestimonialItem';
-import {saveAs} from "file-saver"
-
 
 function AboutPage() {
-
-
-    const saveFile = () => {
-        saveAs(
-            "https://drive.google.com/file/d/1KQ87QQi1Hdq3o2ShSIMeCepiQc7W9Qmj/view?usp=sharing",
-            "resume.pdf"
-        )
-    }
 	
 	
     return (
@@ -50,9 +40,10 @@ function AboutPage() {
                             <li> : 1 Joslin Avenue, NW9 5HW, London</li>
                         </ul>
                     </div>
-					<PrimaryButton onClick={saveFile} btn={'Download Cv'} />
+
+                    
                     <a href="https://drive.google.com/file/d/1KQ87QQi1Hdq3o2ShSIMeCepiQc7W9Qmj/view?usp=sharing" download>
-                    <PrimaryButton onClick={saveFile} btn={'Download Cv'} />
+                    <PrimaryButton btn={'Download Cv'} />
                     </a>
                   
 				
