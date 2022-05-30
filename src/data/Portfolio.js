@@ -1,6 +1,6 @@
 import moneyManager from './../images/Portfolio/MoneyManager.jpg';
 import techUnite from './../images/Portfolio/TechUnite.png';
-
+import personalPortfolio from "./../images/Portfolio/personalPortfolio.png"
 
 
 const Portfolio = [
@@ -21,6 +21,15 @@ const Portfolio = [
         image: techUnite,
         link1: 'https://github.com/dgeorgiev436/Major-Dissertation-Project-TechUnite/',
         link2: 'https://morning-plains-14040.herokuapp.com/',
+    },
+    {
+        id: 3,
+        title: 'Personal-React-Portfolio',
+        subTitle: 'My personal react portfolio',
+        category: 'Single-Page Web Application',
+        image: personalPortfolio,
+        link1: 'https://github.com/dgeorgiev436/React-Personal-Portfolio/',
+        link2: 'https://react-personal-portfolio.herokuapp.com/',
     }
 ];
 
