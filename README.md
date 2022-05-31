@@ -1,29 +1,44 @@
-# React-Portfolio
-Complete portfolio website built in react , material ui, styled components light and dark mode
+# Personal React Portfolio
 
-Getting Started with Create React App
-This project was bootstrapped with Create React App.
+This is a React single-page personal portfolio. The application is developed using react hooks. Emailjs is used for creating the contact form.
 
-Available Scripts
-In the project directory, you can run:
+## Technology Stack
 
+The project is developed using React. The Fetch API is used to get data from a firebase database.
+
+| Technologies |
+| ------------- |
+| HTML  |
+| CSS  |
+| JavaScript  |
+| React.js  |
+| Emailjs  |
+
+
+
+# Start
+
+## Install Dependencies
+
+```
+npm install
+
+```
+
+## Start Development Environment
+
+```
 npm start
-Runs the app in the development mode.
-Open http://localhost:3000 to view it in the browser.
 
-The page will reload if you make edits.
-You will also see any lint errors in the console.
+```
 
-npm test
-Launches the test runner in the interactive watch mode.
-See the section about running tests for more information.
+## Features
 
-npm run build
-Builds the app for production to the build folder.
-It correctly bundles React in production mode and optimizes the build for the best performance.
+* Contact form
+* links to projects
+* download CV
 
-The build is minified and the filenames include the hashes.
-Your app is ready to be deployed!
 
-See the section about deployment for more information.
+
+
 
