@@ -9,7 +9,7 @@ const Portfolio = [
         id: 1,
         category: 'Single-Page Web Application',
         title: 'MoneyManager',
-        subTitle: 'Single-page web application for budget tracking',
+        subTitle: 'MERN stack, Single-page web application for budget tracking',
         image: moneyManager,
         link1: 'https://github.com/dgeorgiev436/React-MoneyManager-App/',
         link2: 'https://warm-reaches-53004.herokuapp.com/',
@@ -17,7 +17,7 @@ const Portfolio = [
     {
         id: 2,
         title: 'TechUnite',
-        subTitle: 'Create a developer profile/portfolio, share posts and get help from other developers',
+        subTitle: 'MERN stack application for creating a developer profile/portfolio, sharing of posts and receiving help from other developers',
         category: 'Single-Page Web Application',
         image: techUnite,
         link1: 'https://github.com/dgeorgiev436/Major-Dissertation-Project-TechUnite/',
