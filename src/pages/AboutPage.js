@@ -42,7 +42,7 @@ function AboutPage() {
                     </div>
 
                     
-                    <a target="_blank" href="https://drive.google.com/file/d/1KQ87QQi1Hdq3o2ShSIMeCepiQc7W9Qmj/view?usp=sharing" download>
+                    <a title="Download Resume" target="_blank" href="https://drive.google.com/file/d/1KQ87QQi1Hdq3o2ShSIMeCepiQc7W9Qmj/view?usp=sharing" download>
                     <PrimaryButton btn={'Download Cv'} />
                     </a>
                   

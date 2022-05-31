@@ -35,8 +35,8 @@ function PortfolioPage() {
                                     <div className="portfolio-image">
                                         <img src={item.image} alt="" />
                                         <ul>
-                                            <li><a target="_blank" href={item.link1}> <GitHubIcon /> </a></li>
-                                            <li><a target="_blank" href={item.link2}> <LinkIcon /> </a></li>
+                                            <li><a title="Go to GitHub repo" target="_blank" href={item.link1}> <GitHubIcon /> </a></li>
+                                            <li><a title="Go to project webpage" target="_blank" href={item.link2}> <LinkIcon /> </a></li>
                                         </ul>
                                     </div>
                                     <h6>{item.title}</h6>

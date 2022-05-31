@@ -18,8 +18,8 @@ function HomePage() {
                 <div className="social-icons">
 					{ /* <a href="https://www.facebook.com/" target='__blank'> <FacebookIcon /></a> */}
                     {/* <a href="https://twitter.com/?lang=en" target='__blank'> <TwitterIcon /></a> */}
-                    <a href="https://github.com/dgeorgiev436/" target='__blank'> <GitHubIcon /></a>
-                    <a href="https://linkedin.com/in/denis-georgiev-87b310213/" target='__blank'> <LinkedInIcon /></a>
+                    <a href="https://github.com/dgeorgiev436/" target='__blank' title="Go to GitHub Profile"> <GitHubIcon /></a>
+                    <a href="https://linkedin.com/in/denis-georgiev-87b310213/" target='__blank' title="Go to LinkedIn Profile"> <LinkedInIcon /></a>
                 	{ /*  <a href="https://www.instagram.com/" target='__blank'> <InstagramIcon /></a> */}
                 </div>
             </div>
