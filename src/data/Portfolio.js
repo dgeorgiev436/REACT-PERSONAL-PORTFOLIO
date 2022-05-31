@@ -1,6 +1,7 @@
 import moneyManager from './../images/Portfolio/MoneyManager.jpg';
 import techUnite from './../images/Portfolio/TechUnite.png';
 import personalPortfolio from "./../images/Portfolio/personalPortfolio.png"
+import ReactMeals from "./../images/Portfolio/ReactMeals.png"
 
 
 const Portfolio = [
@@ -26,6 +27,15 @@ const Portfolio = [
         id: 3,
         title: 'Personal-React-Portfolio',
         subTitle: 'My personal react portfolio',
+        category: 'Single-Page Web Application',
+        image: ReactMeals,
+        link1: 'https://github.com/dgeorgiev436/FoodOrder-React-App-Hooks/',
+        link2: 'https://react-foororder-app.herokuapp.com/',
+    },
+    {
+        id: 4,
+        title: 'ReactMeals',
+        subTitle: 'Food Order React App',
         category: 'Single-Page Web Application',
         image: personalPortfolio,
         link1: 'https://github.com/dgeorgiev436/React-Personal-Portfolio/',
