@@ -35,7 +35,11 @@ npm start
 ## Features
 
 * Contact form
-* links to projects
+* links to project webpages
+* Links to project GitHub repos
+* Link to personal GitHub account
+* Link to personal LinkedIn account
+* Link to CV
 * download CV
 
 
