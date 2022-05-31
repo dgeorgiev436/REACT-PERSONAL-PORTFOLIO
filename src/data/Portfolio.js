@@ -2,6 +2,7 @@ import moneyManager from './../images/Portfolio/MoneyManager.jpg';
 import techUnite from './../images/Portfolio/TechUnite.png';
 import personalPortfolio from "./../images/Portfolio/personalPortfolio.png"
 import ReactMeals from "./../images/Portfolio/ReactMeals.png"
+import ToDo from "./../images/Portfolio/ToDo.png"
 
 
 const Portfolio = [
@@ -40,6 +41,15 @@ const Portfolio = [
         image: ReactMeals,
         link1: 'https://github.com/dgeorgiev436/FoodOrder-React-App-Hooks/',
         link2: 'https://react-foororder-app.herokuapp.com/',
+    },
+    {
+        id: 5,
+        title: 'ToDo',
+        subTitle: 'TypeScript todo app',
+        category: 'Single-Page Web Application',
+        image: ToDo,
+        link1: 'https://github.com/dgeorgiev436/Todo-App-React-TypeScript/',
+        link2: 'https://typescript-todo-app.herokuapp.com/',
     }
 ];
 

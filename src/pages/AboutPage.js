@@ -20,10 +20,11 @@ function AboutPage() {
                 <div className="info-part">
                     <h4>Who am i?</h4>
                     <h3>I am <span>Denis Georgiev</span></h3>
-                    <p>Motivated computer technologies graduate from University of Roehampton with 2 years of non-commercial experience in using MERN stack technologies for
-						projects that can be found in my GitHub account below. </p>
+                    <p>Motivated computer technologies graduate from University of Roehampton with 2 years of non-commercial experience in using MERN stack technologies. </p>
+                    <br></br>
 					<p>Multiple times project leader in group university projects involving mobile application development, web application development, data science and cyber security. 
 						Seeking to implement skills in JavaScript, Node.js, Express.js, React.js and MongoDB to provide value and meet business needs.</p>
+                    <br></br>
                     <div className="information">
                         <ul>
                             <li>Full Name</li>
@@ -40,6 +41,7 @@ function AboutPage() {
                             <li> : 1 Joslin Avenue, NW9 5HW, London</li>
                         </ul>
                     </div>
+                    <br></br>
 
                     
                     <a title="Download Resume" target="_blank" href="https://drive.google.com/file/d/1KQ87QQi1Hdq3o2ShSIMeCepiQc7W9Qmj/view?usp=sharing" download>
